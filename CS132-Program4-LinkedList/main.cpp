@@ -17,13 +17,17 @@ Repo:           https://github.com/TaylorBisset/CS132-Program4-LinkedList
 */
 
 #include <iostream>
+#include <fstream>
 #include "double_linked_list.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello World!\n";
+    DoubleLinkedList list1;
+    DoubleLinkedList list2;
+    DoubleLinkedList modList1;
+    DoubleLinkedList modList2;
 }
 
 /*
