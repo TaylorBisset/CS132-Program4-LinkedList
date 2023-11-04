@@ -165,3 +165,52 @@ Member Functions that potentially need to be changed        Description
                                                             that returns 0 if ch is not a punctuation or non-zero if it is a punctuation.
 
 */
+
+/*
+Changer Function Requirements:
+void changer( DLL list); // prototype for a non-member function (just hanging out with main)....
+yes it is passing by value, so it can test your copy constructor
+it will insert the words "ZIP" and "ZAP" into the list variable passed into this function
+cout the size of the list after the insertions with explaining text
+{something like: Inside changer function: size of list is 2345 }
+
+Some numbers to verify your code:
+As a guide, when you get done reading from infile1.txt, your list1 variable should contain 1104 MYStrings.
+Your modList1 after removing all the strings from list2, should have 759 MYString still left.
+
+Online Turn in:
+All the file for the program, (main, list.h, list.cpp, mystring.h
+and the part of the mystring.cpp that has the additional 3 functions.
+Your output from the program should follow all of the program listings.
+For the output, you should have the text that is sent to the screen,
+and the text that is written to outfile1.txt and outfile2.txt (in that order)
+
+Ways to lose points:
+if your file does not contain the program header with a program description
+your .h file should have a class description about what the class does
+your code should also be consistently indented as talked about in class, and shown in the book
+you can’t use global variables unless it is a const
+you should use good variable names (descriptive, and start with lower case letter)
+proper placement of { and } ( a } should not be placed at the end of a line of code)
+no staple to keep your papers together (folding a corner or using a paper clip are not good enough)
+Remember to submit all the needed files: main, .h files, .cpp files,
+and then the output (console window, outfile1.txt, and then outfile2.txt).
+
+Information if you are not using MYString (because you weren't able to finish it on program 3).
+You need to write code to remove trailing punctuation from the string after it is read in.
+The string class has a size function and can use [ ] so you can access the last char,
+then you can use the ispunct function found in the cctype library, to test if the char is punctuation,
+and if it is, then you can call pop_back member function of the string to remove the last char.
+
+You will also need to modify your compareTo function to work with strings,
+and when you are comparing the chars of the strings you should compare the lower case version of the chars
+( you can do this with the tolower functions, which is also part of the cctype library).
+So you compare a lowercase version of the char but you should leave the actual string unchanged in the comparison.
+
+Does that make sense?   What questions do you have?
+
+Header Comments (Program and Class):
+ Comments are a way of documenting a program (explaining who did what and how).
+ All programs for the rest of the course are required to have the following program header documentation
+ (above main, and in any interface files (.h) ) and inline documentation to explain any tricky pieces of code.
+*/
