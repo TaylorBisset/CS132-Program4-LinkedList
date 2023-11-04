@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="CS132-Program4-LinkedList.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TBString.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
