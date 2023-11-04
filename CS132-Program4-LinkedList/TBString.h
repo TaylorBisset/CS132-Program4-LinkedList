@@ -3,7 +3,7 @@
 #ifndef TBSTRING_H
 #define TBSTRING_H
 
-#include <istream>
+#include <iostream>
 
 using namespace std;
 
@@ -75,4 +75,4 @@ private:
     int cap;
 };
 
-#endif
+#endif // !TBSTRING_H
