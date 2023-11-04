@@ -28,6 +28,37 @@ int main()
     DoubleLinkedList list2;
     DoubleLinkedList modList1;
     DoubleLinkedList modList2;
+
+    ifstream infile1("infile1.txt");
+    if (infile1.is_open()) 
+    {
+        TBString word;
+        while (infile1 >> word) 
+        {
+            list1.insert(word);
+        }
+        infile1.close();
+    }
+    else 
+    {
+        cout << "Error opening infile1.txt" << endl;
+    }
+    ifstream infile2("infile2.txt");
+    if (infile2.is_open()) 
+    {
+        TBString word;
+        while (infile2 >> word) 
+        {
+            list2.insert(word);
+        }
+        infile2.close();
+    }
+    else 
+    {
+        cout << "Error opening infile2.txt" << endl;
+    }
+
+    return 0;
 }
 
 /*
