@@ -81,6 +81,7 @@ Member Functions : return type                      Description
 Node( )                                             constructor
 Node(MYString str)                                  constructor with initialization data
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 Table contains the members of the DoubleLinkedList class
 DoubleLinkedList Class:
@@ -91,8 +92,6 @@ head  : Node *
 tail  : Node *
 it    : mutable Node * { used as the "iterator" to move through the list by using next( ), resetIteration( ), and hasMore( ) }
 count : int
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 DoubleLinkedList( )                                 default constructor
 
