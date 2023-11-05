@@ -152,7 +152,7 @@ bool TBString::operator>(const TBString& argStr) const			// replaces `bool TBStr
 
 bool TBString::operator==(const TBString& argStr) const			// replaces `bool TBString::equals(const TBString& argStr)`
 {
-	return compareTo(this->str, argStr.str) > 0;
+	return compareTo(this->str, argStr.str) == 0;
 }
 
 TBString& TBString::operator=(const TBString& argStr)			// replaces `void TBString::setEqualTo(const TBString& argStr)`
