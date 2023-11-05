@@ -77,7 +77,49 @@ ostream& operator<<(ostream& outputStrm, const DoubleLinkedList& dll)
 // Insert a string into the list
 bool DoubleLinkedList::insert(const TBString& str)
 {
-	return false;
+	Node* newNode = new Node(str);
+
+	// early termination
+	if (!newNode)
+	{
+		return false;
+	}
+
+	Node* current = head;
+	Node* prev = nullptr;
+
+	while (current != nullptr && str < current->data)
+	{
+		prev = current;
+		current = current->next;
+	}
+
+	newNode->next = current;
+	newNode->prev = prev;
+
+	// head
+	if (prev != nullptr)
+	{
+		prev->next = newNode;
+	}
+	else
+	{
+		head = newNode;
+	}
+
+	// tail
+	if (current != nullptr)
+	{
+		current->prev = newNode;
+	}
+	else
+	{
+		tail = newNode;
+	}
+
+	count++;
+
+	return true;
 }
 
 // Remove a string from the list
