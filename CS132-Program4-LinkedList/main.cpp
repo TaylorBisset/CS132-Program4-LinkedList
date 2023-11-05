@@ -101,6 +101,11 @@ int main()
 
     cout << endl << "- - - - - - - - - - - - - - - - - - - -" << endl << endl;
 
+    changer(modList1);
+    cout << "Inside changer function: size of modList1 is " << modList1.getCount() << endl;
+    changer(modList2);
+    cout << "Inside changer function: size of modList2 is " << modList2.getCount() << endl;
+
     return 0;
 }
 
