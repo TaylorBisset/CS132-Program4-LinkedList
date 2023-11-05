@@ -66,6 +66,8 @@ int main()
     cout << "Size of modList1: " << modList1.getCount() << endl;
     cout << "Size of modList2: " << modList2.getCount() << endl;
 
+    cout << endl << "- - - - - - - - - - - - - - - - - - - -" << endl << endl;
+
     // remove list1 strings from modList1
     TBString str1;
     modList1.resetIteration();
@@ -89,6 +91,13 @@ int main()
             modList2.remove(str2);
         }
     }
+
+    cout << "Size of list1: " << list1.getCount() << endl;
+    cout << "Size of list2: " << list2.getCount() << endl;
+    cout << "Size of modList1: " << modList1.getCount() << endl;
+    cout << "Size of modList2: " << modList2.getCount() << endl;
+
+    cout << endl << "- - - - - - - - - - - - - - - - - - - -" << endl << endl;
 
     return 0;
 }
