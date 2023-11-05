@@ -74,16 +74,23 @@ istream& operator>>(istream& inputStrm, TBString& tbStr)		// replaces `bool TBSt
 	char inputWord[100];
 	if (inputStrm >> inputWord)
 	{
-		if (tbStr.str == inputWord)
+		int length = strlen(inputWord);
+
+		// remove punctuation
+		while (length > 0 && ispunct(inputWord[length - 1])) 
 		{
-			return inputStrm;
+			inputWord[length - 1] = '\0';
+			length--;
 		}
 
-		delete tbStr.str;
-		tbStr.str = new char[strlen(inputWord) + 1];
+		if (tbStr.str == inputWord)
+		{
+			delete[] tbStr.str;
+		}
 
-		strcpy_s(tbStr.str, strlen(inputWord) + 1, inputWord);
-		tbStr.end = strlen(inputWord);
+		tbStr.str = new char[length + 1];
+		strcpy_s(tbStr.str, length + 1, inputWord);
+		tbStr.end = length;
 	}
 	return inputStrm;
 }
