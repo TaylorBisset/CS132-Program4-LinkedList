@@ -59,8 +59,18 @@ DoubleLinkedList::~DoubleLinkedList()
 }
 
 // Output operator
-std::ostream& operator<<(std::ostream& outputStrm, const DoubleLinkedList& dll)
+ostream& operator<<(ostream& outputStrm, const DoubleLinkedList& dll)
 {
+	Node* current = dll.head;
+	while (current != nullptr)
+	{
+		outputStrm << current->data;
+		if (current->next != nullptr)
+		{
+			outputStrm << ' ';
+		}
+		current = current->next;
+	}
 	return outputStrm;
 }
 
@@ -90,7 +100,7 @@ void DoubleLinkedList::resetIteration()
 TBString DoubleLinkedList::next()
 {
 	TBString str;
-	if (it != nullptr) 
+	if (it != nullptr)
 	{
 		str = it->data;
 		it = it->next;
@@ -100,5 +110,5 @@ TBString DoubleLinkedList::next()
 
 bool DoubleLinkedList::hasMore() const
 {
-	return false;
+	return it != nullptr;
 }
