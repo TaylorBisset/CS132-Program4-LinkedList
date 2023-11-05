@@ -26,6 +26,23 @@ DoubleLinkedList::DoubleLinkedList(const DoubleLinkedList& dll)
 // Assignment operator
 DoubleLinkedList& DoubleLinkedList::operator=(const DoubleLinkedList& dll) 
 {
+	if (this == &dll)
+	{
+		return *this;
+	}
+	while (head != nullptr)
+	{
+		Node* temp = head;
+		head = head->next;
+		delete temp;
+	}
+
+	Node* current = dll.head;
+	while (current)
+	{
+		insert(current->data);
+		current = current->next;
+	}
 	return *this;
 }
 
