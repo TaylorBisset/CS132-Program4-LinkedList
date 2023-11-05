@@ -18,6 +18,8 @@ Repo:           https://github.com/TaylorBisset/CS132-Program4-LinkedList
 
 using namespace std;
 
+void changer(DoubleLinkedList list);
+
 int main()
 {
     DoubleLinkedList list1;
@@ -61,8 +63,8 @@ int main()
     modList2 = list2;
 
     // output sizes
-    cout << "Size of list1: " << list1.getCount() << endl;
-    cout << "Size of list2: " << list2.getCount() << endl;
+    cout << "Size of list1: "    << list1.getCount() << endl;
+    cout << "Size of list2: "    << list2.getCount() << endl;
     cout << "Size of modList1: " << modList1.getCount() << endl;
     cout << "Size of modList2: " << modList2.getCount() << endl;
 
@@ -92,14 +94,23 @@ int main()
         }
     }
 
-    cout << "Size of list1: " << list1.getCount() << endl;
-    cout << "Size of list2: " << list2.getCount() << endl;
+    cout << "Size of list1: "    << list1.getCount() << endl;
+    cout << "Size of list2: "    << list2.getCount() << endl;
     cout << "Size of modList1: " << modList1.getCount() << endl;
     cout << "Size of modList2: " << modList2.getCount() << endl;
 
     cout << endl << "- - - - - - - - - - - - - - - - - - - -" << endl << endl;
 
     return 0;
+}
+
+void changer(DoubleLinkedList list) 
+{
+    TBString zip("ZIP");
+    TBString zap("ZAP");
+    list.insert(zip);
+    list.insert(zap);
+    cout << "Inside changer function: size of list is " << list.getCount() << endl;
 }
 
 /*
