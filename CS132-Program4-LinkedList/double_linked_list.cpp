@@ -7,11 +7,11 @@ DoubleLinkedList::DoubleLinkedList()
 	:
 	head(nullptr), tail(nullptr), it(nullptr), count(0)
 {
-	
+
 }
 
 // Copy constructor
-DoubleLinkedList::DoubleLinkedList(const DoubleLinkedList& dll) 
+DoubleLinkedList::DoubleLinkedList(const DoubleLinkedList& dll)
 	:
 	head(nullptr), tail(nullptr), it(nullptr), count(0)
 {
@@ -24,7 +24,7 @@ DoubleLinkedList::DoubleLinkedList(const DoubleLinkedList& dll)
 }
 
 // Assignment operator
-DoubleLinkedList& DoubleLinkedList::operator=(const DoubleLinkedList& dll) 
+DoubleLinkedList& DoubleLinkedList::operator=(const DoubleLinkedList& dll)
 {
 	if (this == &dll)
 	{
@@ -47,46 +47,52 @@ DoubleLinkedList& DoubleLinkedList::operator=(const DoubleLinkedList& dll)
 }
 
 // Destructor
-DoubleLinkedList::~DoubleLinkedList() 
+DoubleLinkedList::~DoubleLinkedList()
 {
-	
+	Node* current = head;
+	while (current != nullptr)
+	{
+		Node* temp = current;
+		current = current->next;
+		delete temp;
+	}
 }
 
 // Output operator
-std::ostream& operator<<(std::ostream& outputStrm, const DoubleLinkedList& dll) 
+std::ostream& operator<<(std::ostream& outputStrm, const DoubleLinkedList& dll)
 {
 	return outputStrm;
 }
 
 // Insert a string into the list
-bool DoubleLinkedList::insert(const TBString& str) 
+bool DoubleLinkedList::insert(const TBString& str)
 {
 	return false;
 }
 
 // Remove a string from the list
-bool DoubleLinkedList::remove(const TBString& str) 
+bool DoubleLinkedList::remove(const TBString& str)
 {
 	return false;
 }
 
 // Get the number of strings stored in the list
-int DoubleLinkedList::getCount() const 
+int DoubleLinkedList::getCount() const
 {
 	return count;
 }
 
-void DoubleLinkedList::resetIteration() 
+void DoubleLinkedList::resetIteration()
 {
-	
+
 }
 
-TBString DoubleLinkedList::next() 
+TBString DoubleLinkedList::next()
 {
 	return TBString();
 }
 
-bool DoubleLinkedList::hasMore() const 
+bool DoubleLinkedList::hasMore() const
 {
 	return false;
 }
