@@ -84,12 +84,18 @@ int DoubleLinkedList::getCount() const
 
 void DoubleLinkedList::resetIteration()
 {
-
+	it = head;
 }
 
 TBString DoubleLinkedList::next()
 {
-	return TBString();
+	TBString str;
+	if (it != nullptr) 
+	{
+		str = it->data;
+		it = it->next;
+	}
+	return str;
 }
 
 bool DoubleLinkedList::hasMore() const
