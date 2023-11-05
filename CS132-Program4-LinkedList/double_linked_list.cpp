@@ -125,6 +125,38 @@ bool DoubleLinkedList::insert(const TBString& str)
 // Remove a string from the list
 bool DoubleLinkedList::remove(const TBString& str)
 {
+	Node* current = head;
+	while (current != nullptr) 
+	{
+		if (current->data == str) 
+		{
+
+			// head
+			if (current->prev != nullptr) 
+			{
+				current->prev->next = current->next;
+			}
+			else 
+			{
+				head = current->next;
+			}
+
+			// tail
+			if (current->next != nullptr) 
+			{
+				current->next->prev = current->prev;
+			}
+			else 
+			{
+				tail = current->prev;
+			}
+
+			delete current;
+			count--;
+			return true;
+		}
+		current = current->next;
+	}
 	return false;
 }
 
