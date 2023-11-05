@@ -11,6 +11,7 @@ public:
     Node() 
         : 
         next(nullptr), prev(nullptr) {}
+
     Node(const TBString& data) 
         : 
         data(data), next(nullptr), prev(nullptr) {}

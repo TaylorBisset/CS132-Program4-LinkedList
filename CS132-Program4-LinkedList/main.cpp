@@ -25,6 +25,7 @@ int main()
     DoubleLinkedList modList1;
     DoubleLinkedList modList2;
 
+    // read infile1
     ifstream infile1("infile1.txt");
     if (infile1.is_open()) 
     {
@@ -39,6 +40,8 @@ int main()
     {
         cout << "Error opening infile1.txt" << endl;
     }
+
+    // read infile2
     ifstream infile2("infile2.txt");
     if (infile2.is_open()) 
     {
@@ -57,10 +60,35 @@ int main()
     modList1 = list1;
     modList2 = list2;
 
+    // output sizes
     cout << "Size of list1: " << list1.getCount() << endl;
     cout << "Size of list2: " << list2.getCount() << endl;
     cout << "Size of modList1: " << modList1.getCount() << endl;
     cout << "Size of modList2: " << modList2.getCount() << endl;
+
+    // remove list1 strings from modList1
+    TBString str1;
+    modList1.resetIteration();
+    while (modList1.hasMore()) 
+    {
+        str1 = modList1.next();
+        if (list2.remove(str1)) 
+        {
+            modList1.remove(str1);
+        }
+    }
+
+    // remove list2 strings from modList2
+    TBString str2;
+    modList2.resetIteration();
+    while (modList2.hasMore()) 
+    {
+        str2 = modList2.next();
+        if (list1.remove(str2)) 
+        {
+            modList2.remove(str2);
+        }
+    }
 
     return 0;
 }

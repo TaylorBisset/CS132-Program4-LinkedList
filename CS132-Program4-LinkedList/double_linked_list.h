@@ -48,7 +48,7 @@ private:
 #endif // !DOUBLE_LINKED_LIST_H
 
 /*
-* 
+
 Example using the iterator member functions:
 
 ```
