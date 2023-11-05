@@ -119,6 +119,30 @@ void changer(DoubleLinkedList list)
 }
 
 /*
+OUTPUT:
+
+Size of list1: 3049
+Size of list2: 2922
+Size of modList1: 3049
+Size of modList2: 2922
+
+- - - - - - - - - - - - - - - - - - - -
+
+Size of list1: 258
+Size of list2: 145
+Size of modList1: 298
+Size of modList2: 166
+
+- - - - - - - - - - - - - - - - - - - -
+
+Inside changer function: size of list is 300
+Inside changer function: size of modList1 is 298
+Inside changer function: size of list is 168
+Inside changer function: size of modList2 is 166
+
+*/
+
+/*
 Main Requirements:  (The requirement for your main)
 create 4 of objects of your DLL class ( list1, list2, modList1, modList2 ) modList stands for modified list
 read all of the data from file1 and insert it into list1 (file1: infile1.txt Download infile1.txt)
