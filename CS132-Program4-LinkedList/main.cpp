@@ -5,13 +5,9 @@
  Section:       A
  Program Name:  CS132-Program4-LinkedList
 
- Description:   This program implements a sorted doubly linked list to manage strings from the MYString class. 
-                It ensures alphabetical comparisons, and unique words are stored. 
-                The program includes a copy constructor, assignment operator, 
-                and various member functions to manipulate the linked list. 
-                The main program reads data from input files, performs operations on linked lists, 
+ Description:   Manages sorted doubly linked lists of strings. 
+                Reads data from input files, manipulates lists, 
                 and writes results to output files. 
-                Additionally, a changer function inserts "ZIP" and "ZAP" into the lists.
 
 Repo:           https://github.com/TaylorBisset/CS132-Program4-LinkedList
 */
@@ -57,7 +53,7 @@ int main()
     {
         cout << "Error opening infile2.txt" << endl;
     }
-
+    
     modList1 = list1;
     modList2 = list2;
 
