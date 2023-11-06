@@ -21,7 +21,7 @@ DoubleLinkedList::DoubleLinkedList(const DoubleLinkedList& dll)
 	head(nullptr), tail(nullptr), it(nullptr), count(0)
 {
 	Node* current = dll.head;
-	while (current)
+	while (current != nullptr)
 	{
 		insert(current->data);
 		current = current->next;

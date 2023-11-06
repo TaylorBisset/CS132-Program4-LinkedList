@@ -59,6 +59,7 @@ int main()
         cout << "Error opening infile2.txt" << endl;
     }
 
+    cout << "\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n";
     cout << endl << "- v - v - v - v - v - After reading files - v - v - v - v - v -" << endl << endl;
     
     modList1 = list1;
@@ -67,8 +68,10 @@ int main()
     // output sizes
     cout << "Size of list1: "    << list1.getCount() << endl;
     cout << "Size of list2: "    << list2.getCount() << endl;
+    cout << endl;
     cout << "Size of modList1: " << modList1.getCount() << endl;
     cout << "Size of modList2: " << modList2.getCount() << endl;
+    cout << endl;
     cout << "Created Count from TBString: " << TBString::getCreatedCount() << endl;
     cout << "Current Count from TBString: " << TBString::getCurrentCount() << endl;
 
@@ -99,8 +102,10 @@ int main()
 
     cout << "Size of list1: "    << list1.getCount() << endl;
     cout << "Size of list2: "    << list2.getCount() << endl;
+    cout << endl;
     cout << "Size of modList1: " << modList1.getCount() << endl;
     cout << "Size of modList2: " << modList2.getCount() << endl;
+    cout << endl;
     cout << "Created Count from TBString: " << TBString::getCreatedCount() << endl;
     cout << "Current Count from TBString: " << TBString::getCurrentCount() << endl;
 
@@ -108,11 +113,15 @@ int main()
 
     changer(modList1);
     cout << "Inside changer function: size of modList1 is " << modList1.getCount() << endl;
+    cout << endl;
     changer(modList2);
     cout << "Inside changer function: size of modList2 is " << modList2.getCount() << endl;
+    cout << endl;
     cout << "Created Count from TBString: " << TBString::getCreatedCount() << endl;
     cout << "Current Count from TBString: " << TBString::getCurrentCount() << endl;
     
+    cout << "\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n";
+
     return 0;
 }
 
@@ -128,12 +137,16 @@ void changer(DoubleLinkedList list)
 /*
 OUTPUT:
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 - v - v - v - v - v - After reading files - v - v - v - v - v -
 
 Size of list1: 3049
 Size of list2: 2922
+
 Size of modList1: 3049
 Size of modList2: 2922
+
 Created Count from TBString: 2
 Current Count from TBString: 0
 
@@ -141,8 +154,10 @@ Current Count from TBString: 0
 
 Size of list1: 1390
 Size of list2: 1263
+
 Size of modList1: 1390
 Size of modList2: 1263
+
 Created Count from TBString: 5975
 Current Count from TBString: -6634
 
@@ -150,10 +165,14 @@ Current Count from TBString: -6634
 
 Inside changer function: size of list is 1392
 Inside changer function: size of modList1 is 1390
+
 Inside changer function: size of list is 1265
 Inside changer function: size of modList2 is 1263
+
 Created Count from TBString: 5979
 Current Count from TBString: -9291
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 */
 
