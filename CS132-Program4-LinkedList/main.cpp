@@ -122,6 +122,40 @@ int main()
     
     cout << "\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n";
 
+    ofstream outfile1("outfile1.txt");
+    modList1.resetIteration();
+    int wordCount = 0;
+
+    while (modList1.hasMore())
+    {
+        
+        outfile1 << modList1.next() << " ";
+        wordCount++;
+
+        if (wordCount % 10 == 0)
+        {
+            outfile1 << endl;
+        }
+    }
+    outfile1.close();
+
+    ofstream outfile2("outfile2.txt");
+    modList2.resetIteration();
+    wordCount = 0;
+
+    while (modList2.hasMore())
+    {
+        
+        outfile2 << modList2.next() << " ";
+        wordCount++;
+
+        if (wordCount % 10 == 0)
+        {
+            outfile2 << endl;
+        }
+    }
+    outfile2.close();
+
     return 0;
 }
 
