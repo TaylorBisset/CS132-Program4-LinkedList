@@ -63,6 +63,7 @@ int main()
     modList2 = list2;
 
     // output sizes
+    cout << list1 << endl << endl << endl;
     cout << "Size of list1: "    << list1.getCount() << endl;
     cout << "Size of list2: "    << list2.getCount() << endl;
     cout << "Size of modList1: " << modList1.getCount() << endl;

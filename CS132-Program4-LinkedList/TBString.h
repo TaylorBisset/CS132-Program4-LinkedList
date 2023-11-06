@@ -70,6 +70,22 @@ private:
         }
     }
 
+    int compareCaseInsensitive(const char* lstr, const char* rstr) const
+    {
+        // Compare strings case-insensitively
+        while (*lstr && *rstr)
+        {
+            int cmp = tolower(static_cast<unsigned char>(*lstr)) - tolower(static_cast<unsigned char>(*rstr));
+            if (cmp != 0)
+            {
+                return cmp;
+            }
+            ++lstr;
+            ++rstr;
+        }
+        return tolower(static_cast<unsigned char>(*lstr)) - tolower(static_cast<unsigned char>(*rstr));
+    }
+
     char* str;
     int end;
     int cap;
