@@ -142,17 +142,17 @@ TBString operator+(const TBString& lvalue, const TBString& rvalue)
 
 bool TBString::operator<(const TBString& argStr) const			// replaces `bool TBString::lessThan(const TBString& argStr)`
 {
-	return compareTo(this->str, argStr.str) < 0;
+	return compareCaseInsensitive(str, argStr.str) < 0;
 }
 
 bool TBString::operator>(const TBString& argStr) const			// replaces `bool TBString::greaterThan(const TBString& argStr)`
 {
-	return compareTo(this->str, argStr.str) > 0;
+	return compareCaseInsensitive(str, argStr.str) > 0;
 }
 
 bool TBString::operator==(const TBString& argStr) const			// replaces `bool TBString::equals(const TBString& argStr)`
 {
-	return compareTo(this->str, argStr.str) == 0;
+	return compareCaseInsensitive(str, argStr.str) == 0;
 }
 
 TBString& TBString::operator=(const TBString& argStr)			// replaces `void TBString::setEqualTo(const TBString& argStr)`
