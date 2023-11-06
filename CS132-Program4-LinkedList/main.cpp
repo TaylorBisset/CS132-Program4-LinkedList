@@ -58,6 +58,8 @@ int main()
     {
         cout << "Error opening infile2.txt" << endl;
     }
+
+    cout << endl << "- - - - - - - - - - After reading files - - - - - - - - - -" << endl << endl;
     
     modList1 = list1;
     modList2 = list2;
@@ -68,8 +70,7 @@ int main()
     cout << "Size of modList1: " << modList1.getCount() << endl;
     cout << "Size of modList2: " << modList2.getCount() << endl;
 
-    cout << endl << "- - - - - - - - - - - - - - - - - - - -" << endl << endl;
-
+    cout << endl << "- - - - - - - - - - After removing from files - - - - - - - - - -" << endl << endl;
     // remove list1 strings from modList1
     TBString str1;
     modList1.resetIteration();
@@ -99,16 +100,17 @@ int main()
     cout << "Size of modList1: " << modList1.getCount() << endl;
     cout << "Size of modList2: " << modList2.getCount() << endl;
 
-    cout << endl << "- - - - - - - - - - - - - - - - - - - -" << endl << endl;
+    cout << endl << "- - - - - - - - - - After Changer function - - - - - - - - - -" << endl << endl;
 
     changer(modList1);
     cout << "Inside changer function: size of modList1 is " << modList1.getCount() << endl;
     changer(modList2);
     cout << "Inside changer function: size of modList2 is " << modList2.getCount() << endl;
 
+    cout << endl << "- - - - - - - - - - createdCount and currentCount - - - - - - - - - -" << endl << endl;
 
-    cout << "Created Count from MYString: " << TBString::getCreatedCount() << endl;
-    cout << "Current Count from MYString: " << TBString::getCurrentCount() << endl;
+    cout << "Created Count from TBString: " << TBString::getCreatedCount() << endl;
+    cout << "Current Count from TBString: " << TBString::getCurrentCount() << endl;
 
     return 0;
 }
@@ -125,24 +127,31 @@ void changer(DoubleLinkedList list)
 /*
 OUTPUT:
 
+- - - - - - - - - - After reading files - - - - - - - - - -
+
 Size of list1: 3049
 Size of list2: 2922
 Size of modList1: 3049
 Size of modList2: 2922
 
-- - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - After removing from files - - - - - - - - - -
 
-Size of list1: 258
-Size of list2: 145
-Size of modList1: 298
-Size of modList2: 166
+Size of list1: 1390
+Size of list2: 1263
+Size of modList1: 1390
+Size of modList2: 1263
 
-- - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - After Changer function - - - - - - - - - -
 
-Inside changer function: size of list is 300
-Inside changer function: size of modList1 is 298
-Inside changer function: size of list is 168
-Inside changer function: size of modList2 is 166
+Inside changer function: size of list is 1392
+Inside changer function: size of modList1 is 1390
+Inside changer function: size of list is 1265
+Inside changer function: size of modList2 is 1263
+
+- - - - - - - - - - createdCount and currentCount - - - - - - - - - -
+
+Created Count from TBString: 0
+Current Count from TBString: 0
 
 */
 
