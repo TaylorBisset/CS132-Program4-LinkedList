@@ -1,5 +1,10 @@
 // TBString.cpp
 
+/*
+Implements the TBString class for custom string manipulation. 
+It contains the code for the TBString class's methods and functions.
+*/
+
 #include "TBString.h"
 
 TBString::TBString()

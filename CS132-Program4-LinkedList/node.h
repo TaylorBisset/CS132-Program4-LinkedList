@@ -1,5 +1,10 @@
 // node.h
 
+/*
+Declares the Node class, which is used to create nodes in a linked list. 
+It defines the structure and interface of the Node class.
+*/
+
 #ifndef NODE_H
 #define NODE_H
 

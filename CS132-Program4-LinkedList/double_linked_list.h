@@ -1,5 +1,10 @@
 // double_linked_list.h
 
+/*
+Contains the declaration of the DoubleLinkedList class for managing linked lists of strings. 
+It defines the structure and interface of the class.
+*/
+
 #ifndef DOUBLE_LINKED_LIST_H
 #define DOUBLE_LINKED_LIST_H
 

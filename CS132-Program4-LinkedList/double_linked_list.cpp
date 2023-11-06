@@ -1,5 +1,10 @@
 // double_linked_list.cpp
 
+/*
+Implements the DoubleLinkedList class for managing linked lists of strings. 
+It contains the actual code for the class's methods and functions.
+*/
+
 #include "double_linked_list.h"
 
 // Default constructor

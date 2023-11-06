@@ -1,5 +1,10 @@
 // TBString.h
 
+/*
+Declares the TBString class for custom string manipulation. 
+It defines the structure and interface of the class.
+*/
+
 #ifndef TBSTRING_H
 #define TBSTRING_H
 
