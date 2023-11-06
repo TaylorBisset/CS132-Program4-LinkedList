@@ -63,7 +63,6 @@ int main()
     modList2 = list2;
 
     // output sizes
-    cout << list1 << endl << endl << endl;
     cout << "Size of list1: "    << list1.getCount() << endl;
     cout << "Size of list2: "    << list2.getCount() << endl;
     cout << "Size of modList1: " << modList1.getCount() << endl;
@@ -106,6 +105,10 @@ int main()
     cout << "Inside changer function: size of modList1 is " << modList1.getCount() << endl;
     changer(modList2);
     cout << "Inside changer function: size of modList2 is " << modList2.getCount() << endl;
+
+
+    cout << "Created Count from MYString: " << TBString::getCreatedCount() << endl;
+    cout << "Current Count from MYString: " << TBString::getCurrentCount() << endl;
 
     return 0;
 }

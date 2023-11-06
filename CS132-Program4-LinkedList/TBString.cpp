@@ -177,6 +177,19 @@ const char* TBString::c_str()
 	return str;
 }
 
+int TBString::createdCount = 0;
+int TBString::currentCount = 0;
+
+int TBString::getCreatedCount()
+{
+	return createdCount;
+}
+
+int TBString::getCurrentCount()
+{
+	return currentCount;
+}
+
 /*
 bool TBString::read(istream& inputStrm)
 {

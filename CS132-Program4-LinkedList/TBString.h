@@ -33,6 +33,9 @@ public:
     TBString& operator=(const TBString& argStr);        // replaces `void setEqualTo(const TBString& argStr);`
     const char* c_str();
 
+    static int getCreatedCount();
+    static int getCurrentCount();
+
 private:
     int length(const char* str) const
     {
@@ -89,6 +92,9 @@ private:
     char* str;
     int end;
     int cap;
+
+    static int createdCount;
+    static int currentCount;
 };
 
 #endif // !TBSTRING_H
