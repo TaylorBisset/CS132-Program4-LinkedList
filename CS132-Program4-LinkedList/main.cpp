@@ -59,7 +59,7 @@ int main()
         cout << "Error opening infile2.txt" << endl;
     }
 
-    cout << endl << "- - - - - - - - - - After reading files - - - - - - - - - -" << endl << endl;
+    cout << endl << "- v - v - v - v - v - After reading files - v - v - v - v - v -" << endl << endl;
     
     modList1 = list1;
     modList2 = list2;
@@ -69,8 +69,10 @@ int main()
     cout << "Size of list2: "    << list2.getCount() << endl;
     cout << "Size of modList1: " << modList1.getCount() << endl;
     cout << "Size of modList2: " << modList2.getCount() << endl;
+    cout << "Created Count from TBString: " << TBString::getCreatedCount() << endl;
+    cout << "Current Count from TBString: " << TBString::getCurrentCount() << endl;
 
-    cout << endl << "- - - - - - - - - - After removing from files - - - - - - - - - -" << endl << endl;
+    cout << endl << "- v - v - v - v - v - After removing from lists - v - v - v - v - v -" << endl << endl;
     // remove list1 strings from modList1
     TBString str1;
     modList1.resetIteration();
@@ -99,23 +101,22 @@ int main()
     cout << "Size of list2: "    << list2.getCount() << endl;
     cout << "Size of modList1: " << modList1.getCount() << endl;
     cout << "Size of modList2: " << modList2.getCount() << endl;
+    cout << "Created Count from TBString: " << TBString::getCreatedCount() << endl;
+    cout << "Current Count from TBString: " << TBString::getCurrentCount() << endl;
 
-    cout << endl << "- - - - - - - - - - After Changer function - - - - - - - - - -" << endl << endl;
+    cout << endl << "- v - v - v - v - v - After Changer function - v - v - v - v - v -" << endl << endl;
 
     changer(modList1);
     cout << "Inside changer function: size of modList1 is " << modList1.getCount() << endl;
     changer(modList2);
     cout << "Inside changer function: size of modList2 is " << modList2.getCount() << endl;
-
-    cout << endl << "- - - - - - - - - - createdCount and currentCount - - - - - - - - - -" << endl << endl;
-
     cout << "Created Count from TBString: " << TBString::getCreatedCount() << endl;
     cout << "Current Count from TBString: " << TBString::getCurrentCount() << endl;
-
+    
     return 0;
 }
 
-void changer(DoubleLinkedList list) 
+void changer(DoubleLinkedList list)
 {
     TBString zip("ZIP");
     TBString zap("ZAP");
@@ -127,31 +128,32 @@ void changer(DoubleLinkedList list)
 /*
 OUTPUT:
 
-- - - - - - - - - - After reading files - - - - - - - - - -
+- v - v - v - v - v - After reading files - v - v - v - v - v -
 
 Size of list1: 3049
 Size of list2: 2922
 Size of modList1: 3049
 Size of modList2: 2922
+Created Count from TBString: 2
+Current Count from TBString: 0
 
-- - - - - - - - - - After removing from files - - - - - - - - - -
+- v - v - v - v - v - After removing from lists - v - v - v - v - v -
 
 Size of list1: 1390
 Size of list2: 1263
 Size of modList1: 1390
 Size of modList2: 1263
+Created Count from TBString: 5975
+Current Count from TBString: -6634
 
-- - - - - - - - - - After Changer function - - - - - - - - - -
+- v - v - v - v - v - After Changer function - v - v - v - v - v -
 
 Inside changer function: size of list is 1392
 Inside changer function: size of modList1 is 1390
 Inside changer function: size of list is 1265
 Inside changer function: size of modList2 is 1263
-
-- - - - - - - - - - createdCount and currentCount - - - - - - - - - -
-
-Created Count from TBString: 0
-Current Count from TBString: 0
+Created Count from TBString: 5979
+Current Count from TBString: -9291
 
 */
 

@@ -8,6 +8,9 @@ TBString::TBString()
 	end = 0;
 	str = new char[cap + 1];
 	str[0] = '\0';
+
+	createdCount++;
+	currentCount++;
 }
 
 TBString::TBString(const TBString& mstr) // Copy Constructor
@@ -35,11 +38,15 @@ TBString::TBString(const char* cstr)
 	{
 		str[i] = cstr[i];
 	}
+
+	createdCount++;
+	currentCount++;
 }
 
 TBString::~TBString() // Destructor 
 {
 	delete[] str;
+	currentCount--;
 }
 
 int TBString::length() const
