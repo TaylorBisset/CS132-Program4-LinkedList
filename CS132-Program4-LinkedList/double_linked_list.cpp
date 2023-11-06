@@ -88,7 +88,7 @@ bool DoubleLinkedList::insert(const TBString& str)
 	Node* current = head;
 	Node* prev = nullptr;
 
-	while (current != nullptr && str < current->data)
+	while (current != nullptr && str > current->data)
 	{
 		prev = current;
 		current = current->next;
