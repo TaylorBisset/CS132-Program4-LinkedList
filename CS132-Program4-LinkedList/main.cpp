@@ -181,8 +181,8 @@ Size of list2: 2922
 Size of modList1: 3049
 Size of modList2: 2922
 
-Created Count from TBString: 2
-Current Count from TBString: 0
+Created Count from TBString: 11944
+Current Count from TBString: 11942
 
 - v - v - v - v - v - After removing from lists - v - v - v - v - v -
 
@@ -192,8 +192,8 @@ Size of list2: 1263
 Size of modList1: 1390
 Size of modList2: 1263
 
-Created Count from TBString: 5975
-Current Count from TBString: -6634
+Created Count from TBString: 17917
+Current Count from TBString: 5308
 
 - v - v - v - v - v - After Changer function - v - v - v - v - v -
 
@@ -203,8 +203,8 @@ Inside changer function: size of modList1 is 1390
 Inside changer function: size of list is 1265
 Inside changer function: size of modList2 is 1263
 
-Created Count from TBString: 5979
-Current Count from TBString: -9291
+Created Count from TBString: 20578
+Current Count from TBString: 5308
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
