@@ -101,7 +101,10 @@ istream& operator>>(istream& inputStrm, TBString& tbStr)		// replaces `bool TBSt
 		}
 
 		tbStr.str = new char[length + 1];
-		strcpy_s(tbStr.str, length + 1, inputWord);
+		for (int i = 0; i <= length; ++i)
+		{
+			tbStr.str[i] = inputWord[i];
+		}
 		tbStr.end = length;
 	}
 	return inputStrm;
@@ -177,8 +180,10 @@ TBString& TBString::operator=(const TBString& argStr)			// replaces `void TBStri
 	delete[] this->str;
 
 	this->str = new char[strlen(argStr.str) + 1];
-	strcpy_s(this->str, strlen(argStr.str) + 1, argStr.str);
-
+	for (int i = 0; i <= argStr.end; ++i)
+	{
+		this->str[i] = argStr.str[i];
+	}
 	this->end = argStr.end;
 
 	return *this;
