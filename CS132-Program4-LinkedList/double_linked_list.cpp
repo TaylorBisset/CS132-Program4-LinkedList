@@ -80,6 +80,66 @@ ostream& operator<<(ostream& outputStrm, const DoubleLinkedList& dll)
 }
 
 // Insert a string into the list
+// Does NOT allow duplication
+bool DoubleLinkedList::insert(const TBString& str)
+{
+	Node* current = head;
+	while (current != nullptr)
+	{
+		if (current->data == str)
+		{
+			return false;
+		}
+		current = current->next;
+	}
+
+	Node* newNode = new Node(str);
+
+	// Early termination if allocation fails
+	if (!newNode)
+	{
+		return false;
+	}
+
+	current = head;
+	Node* prev = nullptr;
+
+	while (current != nullptr && str > current->data)
+	{
+		prev = current;
+		current = current->next;
+	}
+
+	newNode->next = current;
+	newNode->prev = prev;
+
+	// head
+	if (prev == nullptr)
+	{
+		head = newNode;
+	}
+	else
+	{
+		prev->next = newNode;
+	}
+
+	// tail
+	if (current == nullptr)
+	{
+		tail = newNode;
+	}
+	else
+	{
+		current->prev = newNode;
+	}
+
+	count++;
+
+	return true;
+}
+
+/* 
+// Allows duplication
 bool DoubleLinkedList::insert(const TBString& str)
 {
 	Node* newNode = new Node(str);
@@ -126,6 +186,7 @@ bool DoubleLinkedList::insert(const TBString& str)
 
 	return true;
 }
+*/
 
 // Remove a string from the list
 bool DoubleLinkedList::remove(const TBString& str)
