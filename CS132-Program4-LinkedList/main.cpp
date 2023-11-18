@@ -175,36 +175,36 @@ OUTPUT:
 
 - v - v - v - v - v - After reading files - v - v - v - v - v -
 
-Size of list1: 3049
-Size of list2: 2922
+Size of list1: 1087
+Size of list2: 1000
 
-Size of modList1: 3049
-Size of modList2: 2922
+Size of modList1: 1087
+Size of modList2: 1000
 
-Created Count from TBString: 11944
-Current Count from TBString: 11942
+Created Count from TBString: 4176
+Current Count from TBString: 4174
 
 - v - v - v - v - v - After removing from lists - v - v - v - v - v -
 
-Size of list1: 1390
-Size of list2: 1263
+Size of list1: 740
+Size of list2: 653
 
-Size of modList1: 1390
-Size of modList2: 1263
+Size of modList1: 740
+Size of modList2: 653
 
-Created Count from TBString: 17917
-Current Count from TBString: 5308
+Created Count from TBString: 6265
+Current Count from TBString: 2788
 
 - v - v - v - v - v - After Changer function - v - v - v - v - v -
 
-Inside changer function: size of list is 1392
-Inside changer function: size of modList1 is 1390
+Inside changer function: size of list is 742
+Inside changer function: size of modList1 is 740
 
-Inside changer function: size of list is 1265
-Inside changer function: size of modList2 is 1263
+Inside changer function: size of list is 655
+Inside changer function: size of modList2 is 653
 
-Created Count from TBString: 20578
-Current Count from TBString: 5308
+Created Count from TBString: 7666
+Current Count from TBString: 2788
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
